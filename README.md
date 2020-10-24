@@ -2,6 +2,7 @@ ddd-example
 ===============================
 
 [![Build Status](https://travis-ci.com/antonioturdo/ddd-example.svg?branch=master)](https://travis-ci.com/antonioturdo/ddd-example)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/antonioturdo/ddd-example/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/antonioturdo/ddd-example/?branch=master)
 
 ### Introduzione
 
