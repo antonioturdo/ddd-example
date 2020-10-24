@@ -1,5 +1,8 @@
-DEV CHALLENGE
+ddd-example
 ===============================
+
+[![Build Status][ico-travis]][link-travis]
+[![Quality Score][ico-code-quality]][link-code-quality]
 
 ### Introduzione
 
