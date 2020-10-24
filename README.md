@@ -1,8 +1,7 @@
 ddd-example
 ===============================
 
-[![Build Status][ico-travis]][link-travis]
-[![Quality Score][ico-code-quality]][link-code-quality]
+[![Build Status](https://travis-ci.com/antonioturdo/ddd-example.svg?branch=master)](https://travis-ci.com/antonioturdo/ddd-example)
 
 ### Introduzione
 
