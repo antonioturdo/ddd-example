@@ -49,13 +49,7 @@ class CSVTransactionRepository implements ITransactionRepository {
         }
 
         $amount = new Amount($matches[2], new Currency($matches[1]));
-
-        $date = new \DateTime($data[1]);
-
-        if ($date === false) {
-            throw new \RuntimeException("Invalid date: ".$data[1]);
-        }
-        
+        $date = new \DateTime($data[1]);        
         $customerID = (int) $data[0];
 
         return new Transaction($customerID, $date, $amount);    
