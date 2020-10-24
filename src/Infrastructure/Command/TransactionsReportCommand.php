@@ -35,7 +35,13 @@ class TransactionsReportCommand extends Command {
     }
 
     protected function execute(InputInterface $input, OutputInterface $output) {
-        $transactionsReport =  $this->customerService->transactionsReport($input->getArgument('customerID'));
+        $customerID = $input->getArgument('customerID');
+        
+        if (!preg_match("/^\d+$/")) {
+            throw new \RuntimeException("customerID argument must be an integer");
+        }
+            
+        $transactionsReport =  $this->customerService->transactionsReport((int) $customerID);
 
         foreach ($transactionsReport->getConvertedTransactions() as $transaction) {
             $output->writeln("Date: ".$transaction->getDate()->format("Y-m-d"). " - Amount in EUR: ". $transaction->getValue()); 
