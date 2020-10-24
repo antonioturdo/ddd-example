@@ -55,6 +55,8 @@ class CSVTransactionRepository implements ITransactionRepository {
         if ($date === false) {
             throw new \RuntimeException("Invalid date: ".$data[1]);
         }
+        
+        $customerID = (int) $data[0];
 
         return new Transaction($customerID, $date, $amount);    
     }
