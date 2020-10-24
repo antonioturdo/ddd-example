@@ -3,7 +3,7 @@ DEV CHALLENGE
 
 ### Introduzione
 
-Esempio di applicazione applicando Domain Driven Design (DDD) e Hexagonal architecture.
+Esempio di applicazione utilizzando Domain Driven Design (DDD) e Hexagonal architecture.
 
 La strutturazione del codice è sovradimensionata per il problema affrontato,
 ovviamente a solo scopo dimostrativo.
