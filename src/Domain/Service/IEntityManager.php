@@ -11,5 +11,11 @@ use AntonioTurdo\DDDExample\Domain\Repository\IRepository;
  */
 interface IEntityManager {
     
+    /**
+     * Return a repository implementation for a given model
+     * 
+     * @param string $model
+     * @return IRepository
+     */
     public function getRepository(string $model): IRepository;
 }

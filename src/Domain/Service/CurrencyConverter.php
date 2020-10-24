@@ -20,6 +20,14 @@ class CurrencyConverter {
         $this->exchangeRateProvider = $exchangeRateProvider;
     }
     
+    /**
+     * Convert the given Amount object in another one with a different currency 
+     * using the current exchange rate between origin and destination currencies
+     * 
+     * @param Amount $amount
+     * @param Currency $toCurrency
+     * @return Amount
+     */
     public function convert(Amount $amount, Currency $toCurrency): Amount {
         if ($amount->getCurrency()->getKey() === $toCurrency->getKey()) {
             return new Amount($amount->getValue(), $toCurrency);

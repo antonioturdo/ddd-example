@@ -26,6 +26,12 @@ class Customer {
         $this->currencyConverter = $currencyConverter;
     }
 
+    /**
+     * Return the transactions report for the customer with the given id
+     * 
+     * @param int $customerID
+     * @return TransactionsReport
+     */
     public function transactionsReport(int $customerID): TransactionsReport {        
         $repository = $this->entityManager->getRepository(Transaction::class);
         

@@ -11,5 +11,12 @@ use AntonioTurdo\DDDExample\Domain\Model\Currency;
  */
 interface IExchangeRateProvider {
     
+    /**
+     * Return the current exchange rate between two currencies
+     * 
+     * @param Currency $fromCurrency
+     * @param Currency $toCurrency
+     * @return float
+     */
     public function getExchangeRate(Currency $fromCurrency, Currency $toCurrency): float;
 }
