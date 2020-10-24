@@ -12,6 +12,10 @@ class CSVParser {
     public function parse(string $filePath) {
         $handle = fopen($filePath, "r");
         
+        if ($handle === false) {
+            throw new \RuntimeException("Cannot open CSV file");
+        }
+        
         // skip the header
         fgetcsv($handle, 0, ";");
         
