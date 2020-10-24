@@ -34,25 +34,29 @@ class CSVTransactionRepository implements ITransactionRepository {
             }
 
             if (((int) $data[0]) === $customerID) {
-                $matches = [];
-
-                if (!preg_match("/(*UTF8)(.)(\d+\.\d)/", $data[2], $matches)) {
-                    throw new \RuntimeException("Invalid amount: ".$data[2]);
-                }
-
-                $amount = new Amount($matches[2], new Currency($matches[1]));
-                
-                $date = new \DateTime($data[1]);
-                
-                if ($date === false) {
-                    throw new \RuntimeException("Invalid date: ".$data[1]);
-                }
-                
-                $transactions[] = new Transaction($customerID, $date, $amount);
+                $transactions[] = $this->buildTransactionFromCSVRow($data);
             }
         }
                 
         return $transactions;
+    }
+    
+    private function buildTransactionFromCSVRow(array $data) {
+        $matches = [];
+
+        if (!preg_match("/(*UTF8)(.)(\d+\.\d)/", $data[2], $matches)) {
+            throw new \RuntimeException("Invalid amount: ".$data[2]);
+        }
+
+        $amount = new Amount($matches[2], new Currency($matches[1]));
+
+        $date = new \DateTime($data[1]);
+
+        if ($date === false) {
+            throw new \RuntimeException("Invalid date: ".$data[1]);
+        }
+
+        return new Transaction($customerID, $date, $amount);    
     }
 
 }
