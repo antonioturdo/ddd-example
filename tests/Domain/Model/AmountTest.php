@@ -15,6 +15,6 @@ use PHPUnit\Framework\TestCase;
 class AmountTest extends TestCase {
     
     public function testCanBeCreated(): void {
-        $this->assertInstanceOf(Amount::class, new Amount(0.0, new Currency("€")));
+        $this->assertInstanceOf(Amount::class, new Amount(0.0, Currency::EUR()));
     }  
 }

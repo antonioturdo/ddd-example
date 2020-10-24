@@ -39,7 +39,7 @@ class Customer {
         
         $report = new TransactionsReport();
 
-        $eur = new Currency("€");
+        $eur = Currency::EUR();
 
         foreach ($transactions as $transaction) {
             $report->addConvertedTransaction(new Transaction($transaction->getCustomerID(), $transaction->getDate(), $this->currencyConverter->convert($transaction->getValue(), $eur)));

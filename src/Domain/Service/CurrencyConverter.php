@@ -35,7 +35,8 @@ class CurrencyConverter {
         
         $ratio = $this->exchangeRateProvider->getExchangeRate($amount->getCurrency(), $toCurrency);
         
-        $convertedValue = $ratio * $amount->getValue();
+        $convertedValue = round($ratio * $amount->getValue(), $toCurrency->getSignificantDecimalDigits());
+        
         return new Amount($convertedValue, $toCurrency);        
     }
 }
