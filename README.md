@@ -12,16 +12,22 @@ ovviamente a solo scopo dimostrativo.
 
 Installare le dipendenze con composer
 
+```
 php composer install
+```
 
 ### Esecuzione
 
 Lanciare il comando da terminale
 
+```
 php bin/console transactions:report 1
+```
 
 ### Test
 
 Lanciare il comando da terminale
 
+```
 php vendor/bin/phpunit tests
+```
