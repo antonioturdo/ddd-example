@@ -9,7 +9,7 @@ use AntonioTurdo\DDDExample\Domain\Service\IEntityManager;
 use AntonioTurdo\DDDExample\Domain\Service\CurrencyConverter;
 
 /**
- * Exposes the functionalities made available by the application about a Customer
+ * Exposes use cases about a Customer
  *
  * @author aturdo
  */
@@ -18,7 +18,7 @@ class Customer {
     /** @var IEntityManager */
     private $entityManager;
     
-    /** @var ICurrencyConverter */
+    /** @var CurrencyConverter */
     private $currencyConverter;
     
     public function __construct(IEntityManager $entityManager, CurrencyConverter $currencyConverter) {
