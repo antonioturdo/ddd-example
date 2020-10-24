@@ -1,0 +1,18 @@
+services:
+    _defaults:
+        autowire: true
+        
+    AntonioTurdo\DDDExample\Domain\Service\:
+        resource: "../src/Domain/Service/*"
+        
+    AntonioTurdo\DDDExample\Application\Service\:
+        resource: "../src/Application/Service/*"
+        public: true  
+        
+    AntonioTurdo\DDDExample\Infrastructure\Service\:
+        resource: "../src/Infrastructure/Service/*"
+        
+    AntonioTurdo\DDDExample\Domain\Service\IExchangeRateProvider: '@AntonioTurdo\DDDExample\Infrastructure\Service\WSExchangeRateProvider'
+    AntonioTurdo\DDDExample\Domain\Service\IEntityManager: '@AntonioTurdo\DDDExample\Infrastructure\Service\CSVEntityManager'
+
+    
