@@ -1,8 +1,7 @@
 <?php
 
-namespace AntonioTurdo\DDDExample\Tests\Domain\Model;
+namespace AntonioTurdo\DDDExample\Tests\Domain\Service;
 
-use AntonioTurdo\DDDExample\Domain\Model\Transaction;
 use AntonioTurdo\DDDExample\Domain\Model\Amount;
 use AntonioTurdo\DDDExample\Domain\Model\Currency;
 
@@ -15,10 +14,49 @@ use PHPUnit\Framework\TestCase;
  */
 class CurrencyConverterTest extends TestCase {
     
-    public function testConvertToSameCurrency(): void {
-        $this->expectException(\UnexpectedValueException::class);
+    private function getConverter() {
+        $exchangeRateProvider = new \AntonioTurdo\DDDExample\Infrastructure\Service\WSExchangeRateProvider();
         
-        new Transaction(-1, new \DateTime(), new Amount(0.0, new Currency("€")));
-    }    
+        return new \AntonioTurdo\DDDExample\Domain\Service\CurrencyConverter($exchangeRateProvider);       
+    }
+    
+    public function testConvertToSameCurrency(): void {
+        $value = 3.31;
+        $currency = new Currency("€");
+        
+        $convertedAmount = $this->getConverter()->convert(new Amount($value, $currency), $currency);
+        
+        $this->assertEquals($value, $convertedAmount->getValue());
+    } 
+    
+    public function testConvertZero(): void {
+        $value = 0.00;
+        $fromCurrency = new Currency("€");
+        $toCurrency = new Currency("$");
+        
+        $convertedAmount = $this->getConverter()->convert(new Amount($value, $fromCurrency), $toCurrency);
+        
+        $this->assertEquals($value, $convertedAmount->getValue());
+    }  
+    
+    public function testConvertPositive(): void {
+        $value = 1.00;
+        $fromCurrency = new Currency("€");
+        $toCurrency = new Currency("$");
+        
+        $convertedAmount = $this->getConverter()->convert(new Amount($value, $fromCurrency), $toCurrency);
+        
+        $this->assertGreaterThanOrEqual(0, $convertedAmount->getValue());
+    }  
+
+    public function testConvertNegative(): void {
+        $value = -1.00;
+        $fromCurrency = new Currency("€");
+        $toCurrency = new Currency("$");
+        
+        $convertedAmount = $this->getConverter()->convert(new Amount($value, $fromCurrency), $toCurrency);
+        
+        $this->assertLessThanOrEqual(0, $convertedAmount->getValue());
+    }      
     
 }

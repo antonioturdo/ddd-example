@@ -17,7 +17,7 @@ class CSVEntityManager implements IEntityManager {
         $shortName = $reflectionClass->getShortName();
         $repositoryName = "AntonioTurdo\\DDDExample\\Infrastructure\\Repository\\CSV".$shortName."Repository";
         
-        return new $repositoryName();
+        return new $repositoryName(new CSVParser());
     }
 
 }

@@ -3,7 +3,6 @@
 namespace AntonioTurdo\DDDExample\Infrastructure\Service;
 
 use AntonioTurdo\DDDExample\Domain\Service\IExchangeRateProvider;
-use AntonioTurdo\DDDExample\Domain\Model\Amount;
 use AntonioTurdo\DDDExample\Domain\Model\Currency;
 
 use CurrencyConverter\CurrencyConverter;
@@ -16,6 +15,10 @@ use CurrencyConverter\CurrencyConverter;
 class WSExchangeRateProvider implements IExchangeRateProvider {
 
     public function getExchangeRate(Currency $fromCurrency, Currency $toCurrency): float {
+        if ($fromCurrency->getKey() === $toCurrency->getKey()) {
+            return 1;
+        }
+        
         $converter = new CurrencyConverter();
         
         $cacheAdapter = new \CurrencyConverter\Cache\Adapter\FileSystem(__DIR__ . '/../../../cache/');
