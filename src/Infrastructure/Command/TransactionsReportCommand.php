@@ -37,7 +37,7 @@ class TransactionsReportCommand extends Command {
     protected function execute(InputInterface $input, OutputInterface $output) {
         $customerID = $input->getArgument('customerID');
         
-        if (!preg_match("/^\d+$/")) {
+        if (!preg_match("/^\d+$/", $customerID)) {
             throw new \RuntimeException("customerID argument must be an integer");
         }
             
