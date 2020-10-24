@@ -3,7 +3,7 @@
 namespace AntonioTurdo\DDDExample\Infrastructure\Service;
 
 /**
- * Description of CSVParser
+ * Utility to parse data from a CSV file
  *
  * @author aturdo
  */

@@ -8,7 +8,7 @@ use AntonioTurdo\DDDExample\Domain\Model\Currency;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Description of AmountTest
+ * AmountTest
  *
  * @author aturdo
  */

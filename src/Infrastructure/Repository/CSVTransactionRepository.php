@@ -9,7 +9,7 @@ use AntonioTurdo\DDDExample\Domain\Model\Currency;
 use AntonioTurdo\DDDExample\Infrastructure\Service\CSVParser;
 
 /**
- * Description of CSVTransactionRepository
+ * Repository to fetch transactions from a CSV
  *
  * @author aturdo
  */

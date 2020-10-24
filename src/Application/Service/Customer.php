@@ -9,7 +9,7 @@ use AntonioTurdo\DDDExample\Domain\Service\IEntityManager;
 use AntonioTurdo\DDDExample\Domain\Service\CurrencyConverter;
 
 /**
- * Description of Customer
+ * Exposes the functionalities made available by the application about a Customer
  *
  * @author aturdo
  */

@@ -6,7 +6,7 @@ use AntonioTurdo\DDDExample\Domain\Service\IEntityManager;
 use AntonioTurdo\DDDExample\Domain\Repository\IRepository;
 
 /**
- * Description of CSVEntityManager
+ * Entity manager implementation to fetch data from CSV files
  *
  * @author aturdo
  */

@@ -9,7 +9,7 @@ use AntonioTurdo\DDDExample\Domain\Model\Currency;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Description of TransactionTest
+ * TransactionTest
  *
  * @author aturdo
  */

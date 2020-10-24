@@ -5,7 +5,7 @@ namespace AntonioTurdo\DDDExample\Domain\Model;
 use AntonioTurdo\DDDExample\Domain\Model\Currency;
 
 /**
- * Description of Amount
+ * Value object to model a monetary amount
  *
  * @author aturdo
  */

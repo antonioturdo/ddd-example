@@ -5,7 +5,9 @@ namespace AntonioTurdo\DDDExample\Domain\Model;
 use MyCLabs\Enum\Enum;
 
 /**
- * Description of Currency
+ * Currency enumeration.
+ * 
+ * Keys are ISO_4217 codes, values are display strings
  *
  * @author aturdo
  */

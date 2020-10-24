@@ -3,10 +3,9 @@
 namespace AntonioTurdo\DDDExample\Domain\Model;
 
 use AntonioTurdo\DDDExample\Domain\Model\Amount;
-use AntonioTurdo\DDDExample\Domain\Exception\ValidationException;
 
 /**
- * Description of Transaction
+ * Model a single transaction
  *
  * @author aturdo
  */

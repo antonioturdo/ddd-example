@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__.'/../bootstrap.php';
+
+use AntonioTurdo\DDDExample\Infrastructure\Command\TransactionsReportCommand;
+
+$commands = [
+    TransactionsReportCommand::getDefaultName() => TransactionsReportCommand::class,
+];
+
+$application = new \Symfony\Component\Console\Application();
+$commandLoader = new \Symfony\Component\Console\CommandLoader\ContainerCommandLoader($containerBuilder, $commands);
+$application->setCommandLoader($commandLoader);
+$application->run();

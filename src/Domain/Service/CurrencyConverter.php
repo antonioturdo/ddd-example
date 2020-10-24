@@ -6,7 +6,8 @@ use AntonioTurdo\DDDExample\Domain\Model\Amount;
 use AntonioTurdo\DDDExample\Domain\Model\Currency;
 
 /**
- * Description of CurrencyConverter
+ * Service to convert an amount in a given currency.
+ * Depends on an exchange rate provider.
  *
  * @author aturdo
  */

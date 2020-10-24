@@ -8,7 +8,7 @@ use AntonioTurdo\DDDExample\Domain\Model\Currency;
 use CurrencyConverter\CurrencyConverter;
 
 /**
- * Description of WSExchangeRateProvider
+ * Exchange rate provider implementation using a third-party library
  *
  * @author aturdo
  */

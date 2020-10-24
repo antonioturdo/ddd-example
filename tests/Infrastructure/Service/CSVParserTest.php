@@ -7,7 +7,7 @@ use AntonioTurdo\DDDExample\Infrastructure\Service\CSVParser;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Description of CSVParserTest
+ * CSVParserTest
  *
  * @author aturdo
  */
