@@ -43,10 +43,14 @@ class TransactionsReportCommand extends Command
         
         $request = new \AntonioTurdo\DDDExample\Application\Request\TransactionsReportRequest($input->getArgument('customerID'), $input->getOption('currency'));
 
-        $transactionsReport = $this->customerService->transactionsReport($request);
+        $transactions = $this->customerService->transactionsReport($request)->getConvertedTransactions();
 
-        foreach ($transactionsReport->getConvertedTransactions() as $transaction) {
+        foreach ($transactions as $transaction) {
             $output->writeln('Date: '.$transaction->getDate()->format('Y-m-d').' - Amount converted: '.$transaction->getValue());
+        }
+        
+        if (count($transactions) === 0) {
+            $output->writeln("No transactions found!");
         }
     }
 }
