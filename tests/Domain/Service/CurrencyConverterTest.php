@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * CurrencyConverterTest.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class CurrencyConverterTest extends TestCase
 {

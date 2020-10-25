@@ -7,7 +7,7 @@ use AntonioTurdo\DDDExample\Domain\Model\Transaction;
 /**
  * A simple DTO to enclose report data.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class TransactionsReport
 {

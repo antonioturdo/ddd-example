@@ -28,6 +28,12 @@ Lanciare il comando da terminale
 php bin/console transactions:report 1
 ```
 
+Opzionalmente è possibile pure specificare la valuta, che di default è EUR
+
+```
+php bin/console transactions:report 1 --currency=USD
+```
+
 ### Test
 
 Lanciare il comando da terminale

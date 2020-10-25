@@ -5,7 +5,7 @@ namespace AntonioTurdo\DDDExample\Domain\Model;
 /**
  * Model a single transaction.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class Transaction
 {

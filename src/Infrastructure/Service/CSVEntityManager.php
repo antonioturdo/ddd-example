@@ -8,7 +8,7 @@ use AntonioTurdo\DDDExample\Domain\Service\IEntityManager;
 /**
  * Entity manager implementation to fetch data from CSV files.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class CSVEntityManager implements IEntityManager
 {

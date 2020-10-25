@@ -8,6 +8,9 @@ services:
     AntonioTurdo\DDDExample\Application\Service\:
         resource: "../src/Application/Service/*"
         
+    AntonioTurdo\DDDExample\Application\Validator\:
+        resource: "../src/Application/Validator/*"        
+        
     AntonioTurdo\DDDExample\Infrastructure\Service\:
         resource: "../src/Infrastructure/Service/*"
         

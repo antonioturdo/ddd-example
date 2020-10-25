@@ -7,7 +7,7 @@ use AntonioTurdo\DDDExample\Domain\Repository\IRepository;
 /**
  * Interface for an entity manager.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 interface IEntityManager
 {

@@ -5,7 +5,7 @@ namespace AntonioTurdo\DDDExample\Domain\Repository;
 /**
  * Just an empty interface used in IEntityManager.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 interface IRepository
 {

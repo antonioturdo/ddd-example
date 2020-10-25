@@ -5,7 +5,7 @@ namespace AntonioTurdo\DDDExample\Domain\Model;
 /**
  * Value object to model a monetary amount.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class Amount
 {

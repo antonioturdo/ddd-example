@@ -9,7 +9,7 @@ use CurrencyConverter\CurrencyConverter;
 /**
  * Exchange rate provider implementation using a third-party library.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class WSExchangeRateProvider implements IExchangeRateProvider
 {

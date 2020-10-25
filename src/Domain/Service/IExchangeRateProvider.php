@@ -7,7 +7,7 @@ use AntonioTurdo\DDDExample\Domain\Model\Currency;
 /**
  * Interface to an exchange rate provider.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 interface IExchangeRateProvider
 {

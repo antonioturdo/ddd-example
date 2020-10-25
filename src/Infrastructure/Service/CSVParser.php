@@ -5,7 +5,7 @@ namespace AntonioTurdo\DDDExample\Infrastructure\Service;
 /**
  * Utility to parse data from a CSV file.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class CSVParser
 {

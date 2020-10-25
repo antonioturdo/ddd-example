@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * AmountTest.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class AmountTest extends TestCase
 {

@@ -5,7 +5,7 @@ namespace AntonioTurdo\DDDExample\Domain\Repository;
 /**
  * Inteface for the transaction repository.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 interface ITransactionRepository extends IRepository
 {

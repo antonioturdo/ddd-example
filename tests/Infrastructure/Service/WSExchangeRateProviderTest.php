@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * WSExchangeRateProviderTest.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class WSExchangeRateProviderTest extends TestCase
 {

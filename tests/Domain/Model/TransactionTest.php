@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * TransactionTest.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class TransactionTest extends TestCase
 {

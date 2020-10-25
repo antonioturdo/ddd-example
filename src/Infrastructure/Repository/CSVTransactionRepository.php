@@ -11,7 +11,7 @@ use AntonioTurdo\DDDExample\Infrastructure\Service\CSVParser;
 /**
  * Repository to fetch transactions from a CSV.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class CSVTransactionRepository implements ITransactionRepository
 {

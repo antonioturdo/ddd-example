@@ -9,7 +9,7 @@ use AntonioTurdo\DDDExample\Domain\Model\Currency;
  * Service to convert an amount in a given currency.
  * Depends on an exchange rate provider.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class CurrencyConverter
 {

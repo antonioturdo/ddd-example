@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * CurrencyTest.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class CurrencyTest extends TestCase
 {

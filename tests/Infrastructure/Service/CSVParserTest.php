@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * CSVParserTest.
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 class CSVParserTest extends TestCase
 {

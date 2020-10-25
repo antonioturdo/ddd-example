@@ -9,7 +9,7 @@ use MyCLabs\Enum\Enum;
  *
  * Keys are ISO_4217 codes, values are display strings
  *
- * @author aturdo
+ * @author Antonio Turdo <antonio.turdo@gmail.com>
  */
 final class Currency extends Enum
 {
