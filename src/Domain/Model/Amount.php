@@ -33,6 +33,6 @@ class Amount
 
     public function __toString()
     {
-        return $this->currency.' '.$this->value;
+        return $this->currency.' '.number_format($this->value, $this->currency->getSignificantDecimalDigits());
     }
 }

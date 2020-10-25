@@ -45,7 +45,7 @@ class TransactionsReportCommand extends Command
         $transactionsReport = $this->customerService->transactionsReport((int) $customerID);
 
         foreach ($transactionsReport->getConvertedTransactions() as $transaction) {
-            $output->writeln('Date: '.$transaction->getDate()->format('Y-m-d').' - Amount in EUR: '.$transaction->getValue());
+            $output->writeln('Date: '.$transaction->getDate()->format('Y-m-d').' - Amount converted: '.$transaction->getValue());
         }
     }
 }

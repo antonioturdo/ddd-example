@@ -17,4 +17,9 @@ class AmountTest extends TestCase
     {
         $this->assertInstanceOf(Amount::class, new Amount(0.0, Currency::EUR()));
     }
+    
+    public function testToString(): void
+    {
+        $this->assertEquals("€ 10.00", new Amount(10, Currency::EUR()));
+    }    
 }
