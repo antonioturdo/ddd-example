@@ -37,11 +37,13 @@ class TransactionsReportCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        if (!is_string($input->getArgument('customerID'))) {
+        $customerID = $input->getArgument('customerID');
+        
+        if (!is_string($customerID)) {
             throw new \RuntimeException('customerID argument must be a scalar string');
         }
 
-        $request = new \AntonioTurdo\DDDExample\Application\Request\TransactionsReportRequest($input->getArgument('customerID'), $input->getOption('currency'));
+        $request = new \AntonioTurdo\DDDExample\Application\Request\TransactionsReportRequest($customerID, $input->getOption('currency'));
 
         $transactions = $this->customerService->transactionsReport($request)->getConvertedTransactions();
 
