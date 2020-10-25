@@ -5,25 +5,27 @@ namespace AntonioTurdo\DDDExample\Application\DTO;
 use AntonioTurdo\DDDExample\Domain\Model\Transaction;
 
 /**
- * A simple DTO to enclose report data
+ * A simple DTO to enclose report data.
  *
  * @author aturdo
  */
-class TransactionsReport {
-    
+class TransactionsReport
+{
     /** @var array */
     private $convertedTransactions;
-    
-    public function __construct() {
+
+    public function __construct()
+    {
         $this->convertedTransactions = [];
     }
 
-    public function addConvertedTransaction(Transaction $transaction) {
+    public function addConvertedTransaction(Transaction $transaction)
+    {
         $this->convertedTransactions[] = $transaction;
     }
-    
-    public function getConvertedTransactions() {
+
+    public function getConvertedTransactions()
+    {
         return $this->convertedTransactions;
     }
-
 }

@@ -7,4 +7,3 @@ $loader = new \Symfony\Component\DependencyInjection\Loader\YamlFileLoader($cont
 $loader->load('config/services.yaml');
 
 $containerBuilder->compile();
-

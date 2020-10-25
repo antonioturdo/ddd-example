@@ -11,32 +11,35 @@ use AntonioTurdo\DDDExample\Domain\Model\Currency;
  *
  * @author aturdo
  */
-class CurrencyConverter {
-    
+class CurrencyConverter
+{
     /** @var IExchangeRateProvider */
     private $exchangeRateProvider;
-    
-    public function __construct(IExchangeRateProvider $exchangeRateProvider) {
+
+    public function __construct(IExchangeRateProvider $exchangeRateProvider)
+    {
         $this->exchangeRateProvider = $exchangeRateProvider;
     }
-    
+
     /**
-     * Convert the given Amount object in another one with a different currency 
-     * using the current exchange rate between origin and destination currencies
-     * 
-     * @param Amount $amount
+     * Convert the given Amount object in another one with a different currency
+     * using the current exchange rate between origin and destination currencies.
+     *
+     * @param Amount   $amount
      * @param Currency $toCurrency
+     *
      * @return Amount
      */
-    public function convert(Amount $amount, Currency $toCurrency): Amount {
+    public function convert(Amount $amount, Currency $toCurrency): Amount
+    {
         if ($amount->getCurrency()->getKey() === $toCurrency->getKey()) {
             return new Amount($amount->getValue(), $toCurrency);
         }
-        
+
         $ratio = $this->exchangeRateProvider->getExchangeRate($amount->getCurrency(), $toCurrency);
-        
+
         $convertedValue = round($ratio * $amount->getValue(), $toCurrency->getSignificantDecimalDigits());
-        
-        return new Amount($convertedValue, $toCurrency);        
+
+        return new Amount($convertedValue, $toCurrency);
     }
 }

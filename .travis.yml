@@ -1,7 +1,9 @@
 language: php
 
 before_script:
+  - composer self-update    
   - composer install
 
 script:
   - vendor/bin/phpunit
+  - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
