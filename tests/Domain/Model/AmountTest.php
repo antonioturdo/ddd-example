@@ -20,6 +20,6 @@ class AmountTest extends TestCase
     
     public function testToString(): void
     {
-        $this->assertEquals("€ 10.00", new Amount(10, Currency::EUR()));
+        $this->assertEquals('€ 10.00', new Amount(10, Currency::EUR()));
     }    
 }
