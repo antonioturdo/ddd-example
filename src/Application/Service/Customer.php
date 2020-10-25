@@ -3,12 +3,12 @@
 namespace AntonioTurdo\DDDExample\Application\Service;
 
 use AntonioTurdo\DDDExample\Application\DTO\TransactionsReport;
+use AntonioTurdo\DDDExample\Application\Request\TransactionsReportRequest;
+use AntonioTurdo\DDDExample\Application\Validator\TransactionsReportValidator;
 use AntonioTurdo\DDDExample\Domain\Model\Currency;
 use AntonioTurdo\DDDExample\Domain\Model\Transaction;
 use AntonioTurdo\DDDExample\Domain\Service\CurrencyConverter;
 use AntonioTurdo\DDDExample\Domain\Service\IEntityManager;
-use AntonioTurdo\DDDExample\Application\Request\TransactionsReportRequest;
-use AntonioTurdo\DDDExample\Application\Validator\TransactionsReportValidator;
 
 /**
  * Exposes use cases about a Customer.
@@ -22,7 +22,7 @@ class Customer
 
     /** @var CurrencyConverter */
     private $currencyConverter;
-    
+
     /** @var TransactionsReportValidator */
     private $transactionsReportValidator;
 
@@ -44,11 +44,11 @@ class Customer
     {
         // validate request
         $this->transactionsReportValidator->validate($request);
-        
+
         // fetch data
         $repository = $this->entityManager->getRepository(Transaction::class);
         $transactions = $repository->getTransactionsByCustomer((int) $request->getCustomerID());
-        
+
         $currency = Currency::{$request->getCurrencyCode()}();
 
         // build report

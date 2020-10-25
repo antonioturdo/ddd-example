@@ -36,11 +36,11 @@ class TransactionsReportCommand extends Command
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
-    { 
+    {
         if (!is_string($input->getArgument('customerID'))) {
             throw new \RuntimeException('customerID argument must be a scalar string');
         }
-        
+
         $request = new \AntonioTurdo\DDDExample\Application\Request\TransactionsReportRequest($input->getArgument('customerID'), $input->getOption('currency'));
 
         $transactions = $this->customerService->transactionsReport($request)->getConvertedTransactions();
@@ -48,9 +48,9 @@ class TransactionsReportCommand extends Command
         foreach ($transactions as $transaction) {
             $output->writeln('Date: '.$transaction->getDate()->format('Y-m-d').' - Amount converted: '.$transaction->getValue());
         }
-        
+
         if (count($transactions) === 0) {
-            $output->writeln("No transactions found!");
+            $output->writeln('No transactions found!');
         }
     }
 }

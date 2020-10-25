@@ -2,8 +2,6 @@
 
 namespace AntonioTurdo\DDDExample\Tests\Domain\Service;
 
-use AntonioTurdo\DDDExample\Domain\Model\Amount;
-use AntonioTurdo\DDDExample\Domain\Model\Currency;
 use AntonioTurdo\DDDExample\Application\Request\TransactionsReportRequest;
 use PHPUnit\Framework\TestCase;
 
@@ -23,20 +21,20 @@ class TransactionsReportValidatorTest extends TestCase
     {
         $this->expectException(\UnexpectedValueException::class);
 
-        $this->getValidator()->validate(new TransactionsReportRequest("1", "EUS"));
+        $this->getValidator()->validate(new TransactionsReportRequest('1', 'EUS'));
     }
 
     public function testInvalidCustomerID(): void
     {
         $this->expectException(\UnexpectedValueException::class);
 
-        $this->getValidator()->validate(new TransactionsReportRequest("A", "EUR"));
+        $this->getValidator()->validate(new TransactionsReportRequest('A', 'EUR'));
     }
 
     public function testValid(): void
     {
         $this->expectNotToPerformAssertions();
-        
-        $this->getValidator()->validate(new TransactionsReportRequest("1", "EUR"));
+
+        $this->getValidator()->validate(new TransactionsReportRequest('1', 'EUR'));
     }
 }
