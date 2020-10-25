@@ -33,5 +33,5 @@ php bin/console transactions:report 1
 Lanciare il comando da terminale
 
 ```
-php vendor/bin/phpunit tests
+php vendor/bin/phpunit
 ```
