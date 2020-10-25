@@ -38,7 +38,7 @@ class TransactionsReportCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $customerID = $input->getArgument('customerID');
-        
+
         if (!is_string($customerID)) {
             throw new \RuntimeException('customerID argument must be a scalar string');
         }
